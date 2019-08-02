@@ -21,7 +21,7 @@ export class DefaultTab {
                     <body>
                     <p id="currentTheme"></p>
                     <h2> Welcome to Axyn! </h2>
-                    <button onclick="showContext()"> Click here to know you Ubbo username </button>
+                    <h4> Your Ubbo username is: </h4>
                     <p id="contextOutput"></p>
                     <script>
                         var microsoftTeams;
@@ -31,6 +31,7 @@ export class DefaultTab {
                             microsoftTeams.registerOnThemeChangeHandler(function(theme) {
                                 document.getElementById('currentTheme').innerHTML = theme;
                             });
+                            showContext()
                         });
 
                         function showAllCommands() {
