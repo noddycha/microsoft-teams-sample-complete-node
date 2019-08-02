@@ -19,8 +19,9 @@ export class DefaultTab {
                     </head>
 
                     <body>
-                    <p id="currentTheme">Current theme will show here when you change it in Teams settings - it can be found on the initial load by fetching the context</p>
-                    <button onclick="showContext()">Click to Show Tab's Context</button>
+                    <p id="currentTheme"></p>
+                    <h2> Welcome to Axyn! </h2>
+                    <button onclick="showContext()"> Click here to know you Ubbo username </button>
                     <p id="contextOutput"></p>
                     <script>
                         var microsoftTeams;
@@ -42,7 +43,7 @@ export class DefaultTab {
 
                         function showContext() {
                             microsoftTeams.getContext((context) => {
-                                document.getElementById('contextOutput').innerHTML = JSON.stringify(context);
+                                document.getElementById('contextOutput').innerHTML = context.loginHint;
                             });
                         }
                     </script>
