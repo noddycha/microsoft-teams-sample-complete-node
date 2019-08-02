@@ -20,6 +20,7 @@ export class DefaultTab {
 
                     <body>
                         <h2> Welcome, </h2> <h3 id="username"> </h3>
+                        <button value="Get Username" onclick="getUsername()"/>
                     <script>
                         var microsoftTeams;
 
@@ -28,7 +29,6 @@ export class DefaultTab {
                             microsoftTeams.registerOnThemeChangeHandler(function(theme) {
                                 // document.getElementById('currentTheme').innerHTML = theme;
                             });
-                            showContext();
                         });
 
                         // function showAllCommands() {
@@ -39,7 +39,7 @@ export class DefaultTab {
                         //     microsoftTeams.shareDeepLink({subEntityId: 'stuff', subEntityLabel: 'stuff2'});
                         // }
 
-                        function showContext() {
+                        function getUsername() {
                             microsoftTeams.getContext((context) => {
                                 document.getElementById('username').innerHTML = JSON.stringify(context).loginHint;
                             });
