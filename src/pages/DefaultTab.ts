@@ -1,6 +1,6 @@
 import * as express from "express";
-let fs = require("fs");
-let path = require("path");
+// let fs = require("fs");
+// let path = require("path");
 import * as config from "config";
 
 export class DefaultTab {
