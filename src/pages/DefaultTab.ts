@@ -45,22 +45,14 @@ export class DefaultTab {
                         function showContext() {
                             microsoftTeams.getContext((context) => {
 
-                              var html = "<table>
-                                <tr>
-                                  <th> Parameter </th>
-                                  <th> Value </th>
-                                </tr>";
+                              var html = "<table> <tr> <th> Parameter </th> <th> Value </th> </tr>";
 
-                                for(attr in context) {
-                                  html = html + "<tr>
-                                  <td>" + attr + "</td>
-                                  <td> " + context[attr] + " </td>
-                                  </tr>";
-                                }
+                              for(attr in context) {
+                                html = html + "<tr> <td>" + attr + "</td> <td> " + context[attr] + " </td> </tr>";
+                              }
 
-                                html = html + "</table>"
-
-                                document.getElementById('contextOutput').innerHTML = html;
+                              html = html + "</table>"
+                              document.getElementById('contextOutput').innerHTML = html;
                             });
                         }
                     </script>
