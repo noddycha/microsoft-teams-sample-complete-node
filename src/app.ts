@@ -124,7 +124,7 @@ if (app.get("env") === "development") {
 // no stacktraces leaked to user
 app.use(function(err: any, req: Request, res: Response, next: Function): void {
     res.status(err.status || 500);
-    res.render("error", {
+    res.send({
         message: err.message,
         error: {},
     });
