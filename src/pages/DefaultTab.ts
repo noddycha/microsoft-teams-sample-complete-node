@@ -21,18 +21,8 @@ export class DefaultTab {
                     <body>
                     <p id="currentTheme"></p>
                     <h2> Welcome to Axyn! </h2>
-                    <h4> Your Ubbo username is: </h4>
-                    <table>
-                      <th>
-                        <td> Parameter </td>
-                        <td> Value </td>
-                      </th>
-                      <tr>
-                        <td> LoginHint </td>
-                        <td id="loginHint"> </td>
-                      </tr>
-                    </table>
-                    <p id="contextOutput"></p>
+                    <h4> Your Ubbo User Info is: </h4>
+                    <div id="contextOutput"></div>
                     <script>
                         var microsoftTeams;
 
@@ -54,7 +44,23 @@ export class DefaultTab {
 
                         function showContext() {
                             microsoftTeams.getContext((context) => {
-                                document.getElementById('contextOutput').innerHTML = JSON.stringify(context);
+
+                              var html = "<table>
+                                <tr>
+                                  <th> Parameter </th>
+                                  <th> Value </th>
+                                </tr>" + 
+
+                                for(attr in context) { 
+                                  return "<tr>
+                                  <td>" + attr + "</td>
+                                  <td> " + context[attr] + " </td>
+                                  </tr>";
+                                }
+
+                                + "</table>"
+
+                                document.getElementById('contextOutput').innerHTML = html;
                             });
                         }
                     </script>
