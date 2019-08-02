@@ -10,6 +10,8 @@ import { VSTSTokenOAuth2API } from "./apis/VSTSTokenOAuth2API";
 import * as teams from "botbuilder-teams";
 import { LoadingTab } from "./pages/LoadingTab";
 import { DefaultTab } from "./pages/DefaultTab";
+import { DefaultTabUserInfo } from "./pages/DefaultTabUserInfo";
+import { DefaultTabAccessToken } from "./pages/DefaultTabAccessToken";
 import { AllCommandsTab } from "./pages/AllCommandsTab";
 import { VSTSAuthTab } from "./pages/VSTSAuthTab";
 import { VSTSAuthFlowStartPopUp } from "./pages/VSTSAuthFlowStartPopUp";
@@ -52,6 +54,8 @@ app.set("view engine", "hbs");
 // Tab and Popup urls
 app.get("/loading", LoadingTab.getRequestHandler());
 app.get("/default", DefaultTab.getRequestHandler());
+app.get("/default-user-info", DefaultTabUserInfo.getRequestHandler());
+app.get("/default-access-token", DefaultTabAccessToken.getRequestHandler());
 app.get("/allCommands", AllCommandsTab.getRequestHandler());
 app.get("/vstsAuth", VSTSAuthTab.getRequestHandler());
 app.get("/vstsAuthFlowStart", VSTSAuthFlowStartPopUp.getRequestHandler());

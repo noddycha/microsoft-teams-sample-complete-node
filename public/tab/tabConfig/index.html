@@ -7,6 +7,14 @@
     <script src="/tab/tabConfig/tabConfig.js"></script>
 </head>
 <body>
-    <h1>Press save to create your tab</h1> 
+    <h1>Please select either of the Auth flows below:</h1> 
+
+    <select id="auth-selector">
+      <option value="user-info" onclick="setValidity()"> Axyn Silent Auth (User Info) </option>
+      <option value="access-token" onclick="setValidity()"> Axyn Silent Auth (Access Token) </option>
+    </select>
+
+    <!-- <button onclick="axynUserInfo()"> Axyn Silent Auth (User Info) </button>
+    <button onclick="axynAccessToken()"> Axyn Silent Auth (Access Token) </button> -->
 </body>   
 </html>
