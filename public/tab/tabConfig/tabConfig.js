@@ -3,6 +3,8 @@ var microsoftTeams;
 // Set up the tab and stuff.
 $(document).ready(function () {
   microsoftTeams.initialize();
+  setValidity();
+  
   microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
     if(document.getElementById('auth-selector').value == "user-info") {
       microsoftTeams.settings.setSettings({
