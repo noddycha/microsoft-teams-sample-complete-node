@@ -11,7 +11,7 @@ export class DefaultTab {
                 let htmlPage = `<!DOCTYPE html>
                     <html>
                     <head>
-                        <title>Bot Info</title>
+                        <title> Axyn Ubbo Dashboard </title>
                         <meta charset="utf-8" />
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         <script src='https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js'></script>
