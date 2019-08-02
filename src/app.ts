@@ -114,9 +114,9 @@ if (app.get("env") === "development") {
     app.use(function(err: any, req: Request, res: Response, next: Function): void {
         res.status(err.status || 500);
         res.render("error", {
-            message: err.message,
-            error: err,
-            layout: false
+          message: err.message,
+          error: err,
+          layout: false,
         });
     });
 }
