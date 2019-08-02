@@ -1,10 +1,10 @@
 {
     "app": {
-        "baseUri": "",
-        "appId": ""
+        "baseUri": "https://axyndemo.flipitapp.com",
+        "appId": "217195b1-7832-4fb6-a4b2-43f9a2e39046"
     },
     "bot": {
-        "botId": "",
+        "botId": "217195b1-7832-4fb6-a4b2-43f9a2e39046",
         "botPassword": ""
     },
     "externalApp": {
@@ -16,8 +16,8 @@
         "token_secret": "SET_AS_ENVIRONMENT_VARIABLE"
     },
     "vstsApp": {
-        "appId": "SET_AS_ENVIRONMENT_VARIABLE",
-        "appSecret": "SET_AS_ENVIRONMENT_VARIABLE"
+        "appId": "217195b1-7832-4fb6-a4b2-43f9a2e39046",
+        "appSecret": ".UTu3zAEM/k3S5FmtTl0KpkxK.fwwXp."
     },
     "channelStorageType": "default_bot_framework_sdk_store",
     "office365TenantFilter" :"#ANY#"

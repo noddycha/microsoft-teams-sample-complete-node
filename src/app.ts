@@ -32,7 +32,7 @@ import * as builder from "botbuilder";
 
 let app = express();
 
-app.set("port", process.env.PORT || 3978);
+app.set("port", process.env.PORT || 6000);
 app.use(express.static(path.join(__dirname, "../../public")));
 app.use(express.static(path.join(__dirname, "./public"))); // used for static dialogs
 app.use(favicon(path.join(__dirname, "../../public/assets", "favicon.ico")));
