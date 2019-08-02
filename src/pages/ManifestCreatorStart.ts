@@ -13,11 +13,12 @@ export class ManifestCreatorStart {
             let validAppId = appId && appId !== "NeedToSetThis";
 
             res.render("manifest-creator/manifestCreatorStart", {
-                baseUri: baseUri,
-                validBaseUri: validBaseUri,
-                appId: appId,
-                validAppId: validAppId,
-                createManifestEnabled: validBaseUri && validAppId,
+              layout: false,
+              baseUri: baseUri,
+              validBaseUri: validBaseUri,
+              appId: appId,
+              validAppId: validAppId,
+              createManifestEnabled: validBaseUri && validAppId,
             });
         };
     }
