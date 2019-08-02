@@ -5,7 +5,7 @@ $(document).ready(function () {
     microsoftTeams.initialize();
     microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
         microsoftTeams.settings.setSettings({
-            suggestedDisplayName: "Axyn Ubbo - User Info",
+            suggestedDisplayName: "Axyn Silent Auth (User Info)",
             contentUrl: createTabUrl(),
             entityId: "AxynUbboUser",
             websiteUrl: createTabUrl(),
