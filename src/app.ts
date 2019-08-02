@@ -43,6 +43,9 @@ let handlebars = exphbs.create({
         appId: () => { return config.get("app.appId"); },
     },
 });
+
+app.set("views", path.join(__dirname, "views/"));
+
 app.engine("hbs", handlebars.engine);
 app.set("view engine", "hbs");
 
