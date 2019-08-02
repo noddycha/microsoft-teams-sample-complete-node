@@ -21,7 +21,7 @@ export class DefaultTabAccessToken {
                     <body>
                     <p id="currentTheme"></p>
                     <h2> Welcome to Axyn! </h2>
-                    <h4> User Info: </h4>
+                    <h4> Access Token - OAuth2 </h4>
                     <div id="contextOutput"></div>
                     <script>
                         var microsoftTeams;
@@ -31,7 +31,7 @@ export class DefaultTabAccessToken {
                             microsoftTeams.registerOnThemeChangeHandler(function(theme) {
                                 document.getElementById('currentTheme').innerHTML = theme;
                             });
-                            showContext()
+                            // showContext()
                         });
 
                         function showAllCommands() {
