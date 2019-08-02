@@ -34,7 +34,7 @@ function createTabUrl(context) {
   if(context == "user-info") {
     return window.location.protocol + "//" + window.location.host + "/default-user-info";
   } else if (context == "access-token") {
-    return window.location.protocol + "//" + window.location.host + "/default-access-token";
+    return window.location.protocol + "//" + window.location.host + "/tab-auth/simple-start-v2";
   } else {
     return window.location.protocol + "//" + window.location.host + "/default";
   }
