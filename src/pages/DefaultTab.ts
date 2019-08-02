@@ -21,7 +21,7 @@ export class DefaultTab {
                     <body>
                     <p id="currentTheme"></p>
                     <h2> Welcome to Axyn! </h2>
-                    <h4> Your Ubbo User Info is: </h4>
+                    <h4> User Info: </h4>
                     <div id="contextOutput"></div>
                     <script>
                         var microsoftTeams;
@@ -43,17 +43,17 @@ export class DefaultTab {
                         }
 
                         function showContext() {
-                            microsoftTeams.getContext((context) => {
+                          microsoftTeams.getContext((context) => {
 
-                              var html = "<table> <tr> <th> Parameter </th> <th> Value </th> </tr>";
+                            var html = "<table> <tr> <th> Parameter </th> <th> Value </th> </tr>";
 
-                              for(attr in context) {
-                                html = html + "<tr> <td>" + attr + "</td> <td> " + context[attr] + " </td> </tr>";
-                              }
+                            for(attr in context) {
+                              html = html + "<tr> <td>" + attr + "</td> <td> " + context[attr] + " </td> </tr>";
+                            }
 
-                              html = html + "</table>"
-                              document.getElementById('contextOutput').innerHTML = html;
-                            });
+                            html = html + "</table>"
+                            document.getElementById('contextOutput').innerHTML = html;
+                          });
                         }
                     </script>
                     </body>
