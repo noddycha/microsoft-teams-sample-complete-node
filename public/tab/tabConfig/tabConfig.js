@@ -5,9 +5,9 @@ $(document).ready(function () {
     microsoftTeams.initialize();
     microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
         microsoftTeams.settings.setSettings({
-            suggestedDisplayName: "Bot Info",
+            suggestedDisplayName: "Axyn Ubbo - User Info",
             contentUrl: createTabUrl(),
-            entityId: "test123",
+            entityId: "AxynUbboUser",
             websiteUrl: createTabUrl(),
         });
       saveEvent.notifySuccess();
