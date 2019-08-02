@@ -49,16 +49,16 @@ export class DefaultTab {
                                 <tr>
                                   <th> Parameter </th>
                                   <th> Value </th>
-                                </tr>" + 
+                                </tr>";
 
-                                for(attr in context) { 
-                                  return "<tr>
+                                for(attr in context) {
+                                  html = html + "<tr>
                                   <td>" + attr + "</td>
                                   <td> " + context[attr] + " </td>
                                   </tr>";
                                 }
 
-                                + "</table>"
+                                html = html + "</table>"
 
                                 document.getElementById('contextOutput').innerHTML = html;
                             });
