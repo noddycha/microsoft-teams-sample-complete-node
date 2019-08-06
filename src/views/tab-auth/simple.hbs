@@ -40,6 +40,8 @@
         {{!-- <button onclick="login()">Login to Azure AD</button> --}}
         <button onclick="loginV2()">Login to Ubbo Dashboard (V2 endpoint)</button>
 
+        <p id="access-token"> </p>
+
         <!-- Result -->
         <p>
             <div id="divError" style="display: none"></div>
@@ -86,8 +88,9 @@
                     width: 600,
                     height: 535,
                     successCallback: function (result) {
-                        console.log("Login succeeded: " + result);
-                        getUserProfile(result.accessToken);
+                      document.getElementById("access-token").innerHTML = result.accessToken;
+                      console.log("Login succeeded: " + result);
+                      getUserProfile(result.accessToken);
                     },
                     failureCallback: function (reason) {
                         console.log("Login failed: " + reason);
