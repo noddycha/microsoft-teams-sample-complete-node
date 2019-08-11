@@ -28,12 +28,12 @@
         <title>Silent Authentication Sample</title>
     </head>
     <body>
+        <h3> Steps followed in Axyn Silent Auth </h3>
         <p>
-            This sample demonstrates silent authentication in a Microsoft Teams tab.
-        </p>
-        <p>
-            The tab will try to get an id token for the user silently, validate the token and show the profile information decoded from the token.
-            The "Login" button will appear only if silent authentication failed.
+            1. This tab will initially try to get an id token for the user silently
+            2. If the token has expired in cache or if the UPN is not in sync, idToken is renewed
+            3. Once the valid token is obtained, shows the profile information decoded from the token (through an async call to API)
+            {{!-- 4. The "Login" button will appear only if silent authentication fails --}}
         </p>
 
         <!-- Login button -->
