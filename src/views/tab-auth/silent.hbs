@@ -39,6 +39,13 @@
         <!-- Login button -->
         <button id="btnLogin" onclick="login()" style="display: none">Login to Azure AD</button>
 
+        <!-- Token and idToken values -->
+        <span> Token val is: </span>
+        <div id="token-val"> </div>
+
+        <span> Renewed Token ID val is: </span>
+        <div id="ren-token-val"> </div>
+
         <!-- Result -->
         <p>
             <div id="divError" style="display: none"></div>
@@ -97,6 +104,7 @@
                 // Get the id token (which is the access token for resource = clientId)
                 let token = authContext.getCachedToken(config.clientId);
                 if (token) {
+                  $("#token-val").text(token);
                     showProfileInformation(token);
                 } else {
                     // No token, or token is expired
@@ -110,6 +118,7 @@
                             // You could attempt to launch the login popup here, but in browsers this could be blocked by
                             // a popup blocker, in which case the login attempt will fail with the reason FailedToOpenWindow.
                         } else {
+                          $("#ren-token-val").text(idToken);
                             showProfileInformation(idToken);
                         }
                     });
