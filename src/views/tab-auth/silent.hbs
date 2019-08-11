@@ -31,8 +31,12 @@
         <h3> Steps followed in Axyn Silent Auth </h3>
         <p>
             1. This tab will initially try to get an id token for the user silently
-            2. If the token has expired in cache or if the UPN is not in sync, idToken is renewed
-            3. Once the valid token is obtained, shows the profile information decoded from the token (through an async call to API)
+        </p>
+        <p>
+          2. If the token has expired in cache or if the UPN is not in sync, idToken is renewed
+        </p>
+        <p>
+          3. Once the valid token is obtained, shows the profile information decoded from the token (through an async call to API)
             {{!-- 4. The "Login" button will appear only if silent authentication fails --}}
         </p>
 
