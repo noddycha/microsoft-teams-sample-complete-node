@@ -30,6 +30,7 @@
     <body>
         <h3> Steps followed in Axyn Silent Auth </h3>
         <div></div>
+        <br />
         <div>
             1. This tab will initially try to get an id token for the user silently
         </div>
@@ -40,10 +41,11 @@
           3. Once the valid token is obtained, shows the profile information decoded from the token (through an async call to API)
             {{!-- 4. The "Login" button will appear only if silent authentication fails --}}
         </div>
-
+        <br />
         <!-- Login button -->
         <button id="btnLogin" onclick="login()" style="display: none">Login to Azure AD</button>
         <div></div>
+        <br />
         <!-- Token and idToken values -->
         <span> Token val is: </span>
         <div id="token-val"> </div>
@@ -51,6 +53,7 @@
         <span> Renewed Token ID val is: </span>
         <div id="ren-token-val"> </div>
         <div></div>
+        <br />
         <!-- Result -->
         <p>
             <div id="divError" style="display: none"></div>
